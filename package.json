@@ -1,8 +1,27 @@
 {
-    "name": "hexo-generator-author",
-    "version": "0.0.1",
-    "dependencies": {
-        "hexo-pagination": "0.0.2"
-    },
-    "main": "index"
+  "name": "hexo-generator-author",
+  "version": "0.0.1",
+  "description": "Author generator plugin for hexo.",
+  "main": "index.js",
+  "dependencies": {
+    "hexo-pagination": "0.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzchenwl/hexo-generator-author.git"
+  },
+  "keywords": [
+    "hexo",
+    "generator",
+    "author"
+  ],
+  "author": "qzchenwl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qzchenwl/hexo-generator-author/issues"
+  },
+  "homepage": "https://github.com/qzchenwl/hexo-generator-author#readme"
 }
