@@ -18,7 +18,7 @@ author: Alice
 
 You get `author` attribute in `post` variable and `authors` attribute in `site` variable. There is also a helper function `list_authors()`.
 
-## Example usage
+### Example usage
 
 Base on *hexo-theme-next*.
 
