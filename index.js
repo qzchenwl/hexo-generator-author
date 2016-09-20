@@ -24,12 +24,24 @@ hexo.extend.generator.register("author", function(locals) {
 
     return authors.reduce((result, author) => {
         var posts = author.posts.sort('-date');
-        var data = pagination('authors/' + author.name, posts, {
+        var author_name = author.name;
+        if(author_name){
+            author_name = author_name.replace(' ','-');
+        }
+        var data = pagination('authors/' + author_name, posts, {
             layout: ['author', 'archive', 'index'],
             data: {
                 author: author.name
             }
         });
-        return result.concat(data);
+        // to provide backward compartibility 
+        // maps both url with space and "-"
+        var data_backward = pagination('authors/' + author.name, posts, {
+            layout: ['author', 'archive', 'index'],
+            data: {
+                author: author.name
+            }
+        });
+        return result.concat(data).concat(data_backward);
     }, []);
 });
