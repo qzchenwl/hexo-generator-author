@@ -24,7 +24,11 @@ hexo.extend.generator.register("author", function(locals) {
 
     return authors.reduce((result, author) => {
         var posts = author.posts.sort('-date');
-        var data = pagination('authors/' + author.name, posts, {
+        var author_name = author.name;
+        if(author_name){
+            author_name = author_name.replace(' ','-');
+        }
+        var data = pagination('authors/' + author_name, posts, {
             layout: ['author', 'archive', 'index'],
             data: {
                 author: author.name
