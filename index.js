@@ -24,8 +24,8 @@ hexo.extend.generator.register("author", function(locals) {
     const generator_config = this.config.author_generator || {};
     const per_page = generator_config.per_page || this.config.per_page || 10;
     return authors.reduce((result, author) => {
-        var posts = author.posts.sort('-date');
-        var data = pagination('authors/' + author.name, posts, {
+        const posts = author.posts.sort('-date');
+        const data = pagination('authors/' + author.name, posts, {
             layout: ['author', 'archive', 'index'],
             perPage: per_page,
             data: {
