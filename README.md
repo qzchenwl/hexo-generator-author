@@ -18,6 +18,15 @@ author: Alice
 
 You get `author` attribute in `post` variable and `authors` attribute in `site` variable. There is also a helper function `list_authors()`.
 
+## Options
+
+``` yaml
+author_generator:
+  per_page: 10
+```
+
+- **per_page**: Posts displayed per page. (0 = disable pagination)
+
 ### Example usage
 
 Base on *hexo-theme-next*.
@@ -108,4 +117,3 @@ Base on *hexo-theme-next*.
 MIT
 
 [Hexo]: http://hexo.io
-

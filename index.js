@@ -21,11 +21,15 @@ hexo.extend.helper.register('list_authors', function() {
 hexo.extend.generator.register("author", function(locals) {
     const posts = locals.posts;
     const authors = posts.map(post => post.author).unique().map(author => ({name: author, posts: posts.find({author})}));
-
+    var per_page = this.config.per_page || 10;
+    if(this.config.author_generator && this.config.author_generator.per_page){
+      per_page = this.config.author_generator.per_page ;
+    }
     return authors.reduce((result, author) => {
         var posts = author.posts.sort('-date');
         var data = pagination('authors/' + author.name, posts, {
             layout: ['author', 'archive', 'index'],
+            perPage: per_page,
             data: {
                 author: author.name
             }
