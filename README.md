@@ -29,7 +29,7 @@ author_generator:
 
 ### Example usage
 
-Base on *hexo-theme-next*.
+Base on *hexo-theme-next*. See full change in branch [multiple-authors] of my fork.
 
 ``` diff
 --- a/layout/_macro/post.swig
@@ -117,3 +117,4 @@ Base on *hexo-theme-next*.
 MIT
 
 [Hexo]: http://hexo.io
+[multiple-authors]: https://github.com/iissnan/hexo-theme-next/compare/master...qzchenwl:multiple-authors?expand=1
