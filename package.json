@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-author",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Author generator plugin for hexo.",
   "main": "index.js",
   "dependencies": {
