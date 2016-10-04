@@ -1,6 +1,6 @@
 'use strict';
 
-var pagination = require('hexo-pagination');
+const pagination = require('hexo-pagination');
 
 if (typeof Array.prototype.unique === 'undefined') {
     Array.prototype.unique = function() { return Array.from(new Set(this)); };
