@@ -23,11 +23,15 @@ You get `author` attribute in `post` variable and `authors` attribute in `site` 
 ``` yaml
 author_generator:
   per_page: 10
+  url_map:
+    "Alice Alexander": alice-alexander
+    "Bob Brown": bob-brown
 ```
 
 - **per_page**: Posts displayed per page. (0 = disable pagination)
+- **url_map**: Use different name in url to make it more readable.
 
-### Example usage
+### Example Usage
 
 Base on *hexo-theme-next*. See full change in branch [multiple-authors] of my fork.
 
